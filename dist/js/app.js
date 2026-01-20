@@ -12,6 +12,7 @@ navTasks.addEventListener("click", (e) => {
     usersSection.style.display = "none";
     navTasks.classList.add("active");
     navUsers.classList.remove("active");
+    headerTitle.textContent = 'Gestão de Tarefas';
 });
 // Mostrar Usuários
 navUsers.addEventListener("click", (e) => {

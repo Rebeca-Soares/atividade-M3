@@ -57,11 +57,11 @@ export function renderTasks(tasks = TasksList) {
         bntCompleted.classList.remove('bnt-done', 'bnt-undone');
         if (task.completed) {
             bntCompleted.textContent = 'Desfazer';
-            bntCompleted.classList.add('btn-undone'); // classe rosa claro
+            bntCompleted.classList.add('btn-undone');
         }
         else {
             bntCompleted.textContent = 'Concluir';
-            bntCompleted.classList.add('btn-done'); // classe verde claro
+            bntCompleted.classList.add('btn-done');
         }
         bntCompleted.onclick = () => {
             task.markCompleted();
@@ -131,24 +131,20 @@ clearCompleted.addEventListener('click', () => {
 const searchInput = document.getElementById('searchTask');
 searchInput.addEventListener('input', () => {
     const query = searchInput.value.toLowerCase();
-    // Filtra as tarefas pelo título
     const filteredTasks = TasksList.filter(task => task.title.toLowerCase().includes(query));
     renderTasks(filteredTasks);
 });
 const categoryDropdownBtn = document.getElementById('categoryDropdownBtn');
 const categoryDropdownMenu = document.getElementById('categoryDropdownMenu');
 let activeCategory = 'All';
-// Toggle do menu
 categoryDropdownBtn.addEventListener('click', () => {
     categoryDropdownMenu.style.display = categoryDropdownMenu.style.display === 'block' ? 'none' : 'block';
 });
-// Fecha o menu ao clicar fora
 document.addEventListener('click', (e) => {
     if (!categoryDropdownBtn.contains(e.target) && !categoryDropdownMenu.contains(e.target)) {
         categoryDropdownMenu.style.display = 'none';
     }
 });
-// Seleção de categoria
 categoryDropdownMenu.addEventListener('click', (e) => {
     const target = e.target;
     const category = target.dataset.category;
@@ -156,12 +152,10 @@ categoryDropdownMenu.addEventListener('click', (e) => {
         return;
     activeCategory = category;
     categoryDropdownBtn.innerHTML = `<i class="bi bi-funnel"></i>  ${category}  <i class="bi bi-chevron-down"></i>`;
-    // Filtra tarefas
     const filteredTasks = activeCategory === 'All'
         ? TasksList
         : TasksList.filter(task => task.category === activeCategory);
     renderTasks(filteredTasks);
-    // Fecha o menu
     categoryDropdownMenu.style.display = 'none';
 });
 const editTaskModal = document.getElementById('editTaskModal');
@@ -170,26 +164,21 @@ const editTaskCategory = document.getElementById('editTaskCategory');
 const saveEditTaskBtn = document.getElementById('saveEditTaskBtn');
 const closeModalBtn = document.getElementById('closeEditTaskModal');
 let taskBeingEdited = null;
-// Abre o modal
 function openEditModal(task) {
     taskBeingEdited = task;
     editTaskInput.value = task.title;
     editTaskCategory.value = task.category;
     editTaskModal.classList.add('show');
 }
-// Fecha o modal
 function closeEditModal() {
     editTaskModal.classList.remove('show');
 }
-// Fecha ao clicar no X
 closeModalBtn.onclick = closeEditModal;
-// Fecha ao clicar fora do conteúdo
 window.onclick = function (event) {
     if (event.target === editTaskModal) {
         closeEditModal();
     }
 };
-// Salvar alterações
 saveEditTaskBtn.onclick = () => {
     if (taskBeingEdited) {
         const newTitle = editTaskInput.value.trim();
