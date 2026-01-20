@@ -66,7 +66,7 @@ export function renderTasks(tasks: TasksClass[] = TasksList) {
 
         const titleRow = document.createElement("div");
         titleRow.classList.add('title-row');
-        titleRow.appendChild(span);   // agora podemos usar span
+        titleRow.appendChild(span);  
         titleRow.appendChild(badge);
 
         const textContainer = document.createElement("div");
