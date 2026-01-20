@@ -27,7 +27,8 @@ O layout é **responsivo**, funcionando bem em desktops e dispositivos móveis.
    ```bash
    git clone https://github.com/rebeca-cerqueira/atividade-M3.git
 
-   ## Principais decisões e justificações
+
+## Principais decisões e justificações
 
 ### 1. Layout responsivo
 - Uso de **flexbox** e **media queries** para adaptar inputs, botões e cards de tarefas.  
