@@ -21,5 +21,5 @@ navUsers.addEventListener("click", (e) => {
     usersSection.style.display = "block";
     navUsers.classList.add("active");
     navTasks.classList.remove("active");
-    headerTitle.textContent = 'Gestão de Usuários';
+    headerTitle.textContent = 'Gestão de Utilizadores';
 });

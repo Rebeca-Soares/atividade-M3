@@ -41,7 +41,7 @@ export function renderTasks(tasks = TasksList) {
         badge.classList.add("badge", task.category.toLowerCase());
         const titleRow = document.createElement("div");
         titleRow.classList.add('title-row');
-        titleRow.appendChild(span); // agora podemos usar span
+        titleRow.appendChild(span);
         titleRow.appendChild(badge);
         const textContainer = document.createElement("div");
         textContainer.appendChild(titleRow);

@@ -3,7 +3,7 @@ class UserClass {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.active = true; //inicia como ativo
+        this.active = true;
     }
     disable() {
         this.active = false;
