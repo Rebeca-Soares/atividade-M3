@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es2015", // ou "es6" funciona igual
+        "lib": [
+            "es2015",
+            "dom"
+        ], // garante métodos modernos de array + DOM
+        "strict": true, // verificação rigorosa
+        "rootDir": "./src", // pasta do seu TS
+        "outDir": "./dist/js",
+        "esModuleInterop": true
+    }
+}
