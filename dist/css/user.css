@@ -89,10 +89,6 @@ button {
   margin: 0 auto;
 }
 
-#formUser button:hover {
-  background-color: var(--primary-dark);
-}
-
 #filterActives {
   background-color: #73d5a798;
 }
@@ -321,8 +317,14 @@ button {
   background-color: hsla(354, 70%, 54%, 0.475);
 }
 
-#formUser button:hover {
-  background-color: #6a44e0;
+#filterActives:hover {
+  background-color: #2b8159;
+  color: white;
+}
+
+#filterDesactive:hover {
+  background-color: hsl(354, 70%, 54%);
+  color: white;
 }
 
 

@@ -216,6 +216,7 @@ modalOverlay.addEventListener('click', (e) => {
     }
 });
 
+//Retornar as Iniciais do nome no Card de cada usuário
 function getInitials(name: string): string {
     return name
         .split(' ')
