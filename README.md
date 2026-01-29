@@ -4,8 +4,8 @@
 - Nome: Rebeca Luiza Soares Cerqueira - Aluno nº 224
 
 ## Repositório GitHub
-- [[Link do repositório](https://github.com/Rebeca-Soares/Gestor-Tarefas-Utilizadores)]
-- [[Link do GitHub Pages](https://rebeca-soares.github.io/Gestor-Tarefas-Utilizadores/)] 
+- [[Link do repositório](https://github.com/Rebeca-Soares/atividade-M3)]
+- [[Link do GitHub Pages](https://rebeca-soares.github.io/atividade-M3/)] 
 
 ## Descrição
 Aplicação web de gestão de tarefas que permite:
@@ -13,14 +13,9 @@ Aplicação web de gestão de tarefas que permite:
 - Adicionar, editar e remover tarefas.
 - Marcar tarefas como concluídas ou não concluídas.
 - Filtrar tarefas por categoria (Trabalho, Pessoal, Estudo).
-- Controle de Status.
-- Sistema de comentários com histórico e suporte a anexos (upload de arquivos ou URLs).
-- Deadlines: Monitorização de prazos com cálculos de tempo relativo (ex: "atrasada", "faltam 2 dias").
 
 Aplicação web de gestão de Utilizadores que permite:
 - Gestão de diferentes usuários, permitindo a visualização da respetivas informações;
-- Controle de Acessos (RBAC): Sistema de permissões baseado em cargos (ADMIN, MANAGER, MEMBER, VIEWER).
-- Interface Dinâmica: O sistema esconde ou bloqueia botões de edição/eliminação dependendo do nível de acesso do utilizador logado.
 - Filtrar e atualizar Usuarios por Ativo e Inativo;
 - Funcionalidade de adicionar novo usuário;
 
@@ -58,5 +53,18 @@ O layout é **responsivo**, funcionando bem em desktops e dispositivos móveis.
 ### 6. Código limpo e modular
 - CSS organizado e HTML simplificado para manutenção e futuras extensões.  
 - **Justificação:** facilita adição de funcionalidades sem comprometer o layout ou lógica existente.
+
+## 7. Separação das pastas
+
+Separação clara por responsabilidade:
+
+- models/ → Classes ou tipos de dados (Tasks, Users, etc.)
+- services/ → Lógica de negócio, manipulação de listas, CRUD
+- ui/ → Tudo relacionado à interface (renderização, eventos, modais)
+   '- ui/dom/ → Seletores DOM
+   '- ui/modal/ → Funções de modal
+- utils/ → Funções auxiliares, helpers, formatação
+- assets/ → CSS, imagens, ícones
+- main.ts / index.ts → Entrada principal da aplicação
 
 
